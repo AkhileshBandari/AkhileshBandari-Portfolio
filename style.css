@@ -270,6 +270,7 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    justify-content: flex-start
 }
 
 /* ================= ORBIT RING ================= */
