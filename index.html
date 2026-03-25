@@ -17,11 +17,8 @@
     <!-- LIGHT/DARK MODE TOGGLE -->
     <div class="theme-toggle">
         <input type="checkbox" id="theme-switch" />
-        <label for="theme-switch">🌙</label>
     </div>
 
-    <!-- SPACE BACKGROUND -->
-    <canvas id="space-bg"></canvas>
 
     <!-- HEADER -->
     <header class="header">
@@ -43,7 +40,7 @@
 
 
             <h1>
-                Hey! I'm <span class="highlight">Akhilesh</span><br>
+                HI! I'm <span class="highlight">Akhilesh</span><br>
                 <span id="dynamic-role"></span><span class="cursor">_</span>
             </h1>
 
@@ -57,7 +54,7 @@
             </p>
 
             <div class="buttons">
-                <a href="#" class="btn primary">Check Portfolio</a>
+                <a href="#projects" class="btn primary">View Work</a>
                 <a href="#contact" class="btn secondary">Contact Me</a>
             </div>
         </div>
@@ -242,31 +239,26 @@
 
     <!-- SKILLS -->
     <section id="skills" class="section" data-aos="fade-up">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title">Skills Summary</h2>
 
         <div class="skills-grid" id="skills-container"></div>
 
         <script>
             const skillCategories = {
                 "Programming Languages": [
-                    [
-                        "Python",
-                        "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
-                    ],
-                    [
-                        "JavaScript",
-                        "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-                    ],
+                    ["Python", "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",],
+                    ["JavaScript", "https://cdn-icons-png.flaticon.com/512/5968/5968292.png"],
                     ["Java", "https://cdn-icons-png.flaticon.com/512/226/226777.png"],
                     ["SQL", "https://cdn-icons-png.flaticon.com/512/4248/4248443.png"],
                 ],
 
                 "Frontend Development": [
                     [
-                        "HTML5",
-                        "https://cdn-icons-png.flaticon.com/512/5968/5968267.png",
+                        "HTML5", "https://cdn-icons-png.flaticon.com/512/5968/5968267.png",
                     ],
-                    ["CSS3", "https://cdn-icons-png.flaticon.com/512/5968/5968242.png"],
+                    [
+                        "CSS3", "https://cdn-icons-png.flaticon.com/512/5968/5968242.png"
+                    ],
                     [
                         "Bootstrap",
                         "https://cdn-icons-png.flaticon.com/512/5968/5968672.png",
@@ -331,10 +323,9 @@
                     ],
                 ],
 
-                "Cloud & Deploy": [
+                "Cloud & Deployment": [
                     ["AWS", "https://cdn-icons-png.flaticon.com/512/873/873120.png"],
-                    [
-                        "(GCP)",
+                    ["(GCP)",
                         "https://cdn-icons-png.flaticon.com/512/5968/5968863.png",
                     ],
                     ["Docker", "https://cdn-icons-png.flaticon.com/512/919/919853.png"],
@@ -342,19 +333,17 @@
                         "Netlify",
                         "https://cdn-icons-png.flaticon.com/512/873/873107.png",
                     ],
+                    [
+                        "Render",
+                        "https://cdn-icons-png.flaticon.com/512/873/873102.png",
+                    ],
                 ],
 
                 "Tools & Automation": [
                     ["Git", "https://cdn-icons-png.flaticon.com/512/2111/2111288.png"],
                     ["GitHub", "https://cdn-icons-png.flaticon.com/512/733/733609.png"],
-                    [
-                        "Scikit-learn",
-                        "https://cdn-icons-png.flaticon.com/128/2721/2721297.png",
-                    ],
-                    [
-                        "OpenAI API",
-                        "https://cdn-icons-png.flaticon.com/512/17461/17461861.png",
-                    ],
+                    ["Scikit-learn","https://cdn-icons-png.flaticon.com/128/2721/2721297.png"],
+                    ["OpenAI API","https://cdn-icons-png.flaticon.com/512/17461/17461861.png",],
                     [
                         "OpenCV",
                         "https://cdn-icons-png.flaticon.com/512/1532/1532556.png",
@@ -405,6 +394,47 @@
                 <a class="social-icon" href="https://youtu.be/tJBnLN8S4SQ">
                     Live Demo</a>
             </div>
+                        <div class="project-card" data-aos="flip-left">
+                <img src="./ASSECT/project5.png" alt="VictoryMatrix" />
+                <h3>Financial Tracking System Dashboard</h3>
+                <p>
+                    The app provides real-time insights with charts (monthly + category-wise) to help users understand where their money goes and control overspending.<br>
+
+                </p>
+                <a class="social-icon" href="https://github.com/AkhileshBandari/Expense-Tracker-App.git">
+                    GitHub</a>
+                <a class="social-icon" href="#">
+                    Live Demo</a>
+            </div>
+            <div class="project-card" data-aos="flip-left">
+                <img src="./ASSECT/project6.png" alt="StockSense" />
+                <h3>Furni WEB – E-Commerce Platform</h3>
+                <p>
+                    Built a modern furniture e-commerce UI with responsive design and smooth animations.<br>
+                    Used CSS media queries and JavaScript for responsive design across devices.<br>
+                </p>
+                <a class="social-icon" href="https://github.com/AkhileshBandari/furni-web.git">
+                    GitHub</a>
+                <a class="social-icon" href="https://magenta-beignet-35c40f.netlify.app/">
+                    Live Demo</a>
+            </div>
+
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="flip-left">
+                <img src="./ASSECT/project4.png" alt="Intelligent Security System" />
+                <h3>Claim Processing Pipeline</h3>
+                <p>
+                   Built a FastAPI-based claim processing pipeline for medical documents<br>
+                   Implemented LLM-powered page classification<br>
+                    ID, Discharge Summary, Itemized Bill<br>
+                    <strong style="color:#3e57e1;">Accuracy: 96%</strong>
+                </p>
+                <a class="social-icon" href="https://github.com/AkhileshBandari/claim-processing-pipeline.git">
+                    GitHub</a>
+                <a class="social-icon" href="https://youtu.be/te9pj3Nrel0">
+                    Live Demo</a>
+            </div>
             <div class="project-card" data-aos="flip-left">
                 <img src="./ASSECT/project2.png" alt="StockSense" />
                 <h3>StockSense – Trend Prediction</h3>
@@ -416,7 +446,7 @@
                 </p>
                 <a class="social-icon" href="https://github.com/AkhileshBandari/StockSence.git">
                     GitHub</a>
-                <a class="social-icon" href="https://youtu.be/tJBnLN8S4SQ">
+                <a class="social-icon" href="https://youtu.be/TVRHHF5acss">
                     Live Demo</a>
             </div>
             <div class="project-card" data-aos="flip-left">
@@ -434,7 +464,7 @@
                     Live Demo</a>
             </div>
         </div>
-    </section>
+        </section>
 
     <!-- SOCIALS -->
     <section class="socials" data-aos="fade-up">

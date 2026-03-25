@@ -4,64 +4,6 @@ themeSwitch.addEventListener('change', () => {
     document.body.classList.toggle('light');
 });
 
-// ================= SPACE BACKGROUND =================
-const canvas = document.getElementById('space-bg');
-const ctx = canvas.getContext('2d');
-
-// Resize canvas
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', () => {
-    resizeCanvas();
-    setPlanetCount();
-    initPlanets();
-});
-
-// Planet count based on screen size
-let planetCount;
-function setPlanetCount() {
-    const w = window.innerWidth;
-    if (w < 480) planetCount = 10;
-    else if (w < 768) planetCount = 15;
-    else if (w < 1024) planetCount = 20;
-    else planetCount = 30;
-}
-setPlanetCount();
-
-// Initialize planets
-let planets = [];
-function initPlanets() {
-    planets = [];
-    for (let i = 0; i < planetCount; i++) {
-        planets.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            radius: Math.random() * 8 + 3,
-            speed: Math.random() * 0.5 + 0.2,
-            color: `rgba(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255},0.7)`
-        });
-    }
-}
-initPlanets();
-
-// Animate planets
-function animatePlanets() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    planets.forEach(p => {
-        p.y -= p.speed;
-        if (p.y < -10) p.y = canvas.height + 10;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
-        ctx.fill();
-    });
-    requestAnimationFrame(animatePlanets);
-}
-animatePlanets();
-
 // ================= GSAP SCROLL ANIMATIONS =================
 gsap.utils.toArray('.section').forEach(section => {
     gsap.from(section, {
