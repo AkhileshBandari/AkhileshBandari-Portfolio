@@ -354,7 +354,7 @@ h1 {
     width: 450px;
     height: 450px;
     border-radius: 50%;
-    border: 10px dashed rgba(255, 255, 255, 0.15);
+    border: 5px dashed rgba(44, 11, 234, 0.15);
     animation: rotateOrbit 25s linear infinite;
 }
 
