@@ -333,9 +333,7 @@ h1 {
     z-index: 1;
 }
 
-    animation: rotateAnti 4s linear infinite;
-    z-index: 1;
-}
+
 
 /* ANTI-CLOCKWISE ROTATION */
 @keyframes rotateAnti {
